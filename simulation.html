@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulation d'aides - EEH21</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="simu-container">
+    <h1>Simulateur d'aides à la rénovation</h1>
+    <form id="simulateurForm" class="simu-form">
+      <label for="foyer">Nombre de personnes dans le foyer</label>
+      <input type="number" id="foyer" min="1" required />
+
+      <label for="revenu">Revenu fiscal (€)</label>
+      <input type="number" id="revenu" min="0" required />
+
+      <label for="ageLogement">Âge du logement</label>
+      <select id="ageLogement" required>
+        <option value="-2">Moins de 2 ans</option>
+        <option value="2-15">Entre 2 et 15 ans</option>
+        <option value="+15">Plus de 15 ans</option>
+      </select>
+
+      <fieldset>
+        <legend>Travaux à réaliser :</legend>
+
+        <div class="checkbox">
+          <input type="checkbox" id="combles" />
+          <label for="combles">Combles perdus</label>
+          <input type="number" id="surfaceCombles" placeholder="Surface (m²)" min="0" />
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="rampants" />
+          <label for="rampants">Rampants/toiture</label>
+          <input type="number" id="surfaceRampants" placeholder="Surface (m²)" min="0" />
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="mursExt" />
+          <label for="mursExt">Murs extérieurs</label>
+          <input type="number" id="surfaceMurs" placeholder="Surface (m²)" min="0" />
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="plancher" />
+          <label for="plancher">Plancher bas</label>
+          <input type="number" id="surfacePlancher" placeholder="Surface (m²)" min="0" />
+        </div>
+      </fieldset>
+
+      <button type="submit">Calculer les aides</button>
+    </form>
+
+    <div id="resultat" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
