@@ -17,13 +17,17 @@
       Les résultats de notre simulateur sont des estimations, susceptibles de varier en fonction de plusieurs paramètres. 
     </p>
 
-    <form action="https://formspree.io/f/mkgbqane" method="POST">
-      <input type="text" name="Prénom" placeholder="Prénom" required>
-      <input type="text" name="Nom" placeholder="Nom" required>
-      <input type="email" name="Email" placeholder="Adresse email" required>
-      <input type="text" name="Adresse" placeholder="Adresse postale" required>
-      <button type="submit">Commencer la simulation</button>
-    </form>
+<form action="https://formspree.io/f/mkgbqane" method="POST">
+  <input type="text" name="Prénom" placeholder="Prénom" required>
+  <input type="text" name="Nom" placeholder="Nom" required>
+  <input type="tel" name="Téléphone" placeholder="Téléphone" required pattern="[0-9]{10}" title="Entrez un numéro à 10 chiffres">
+  <input type="email" name="Email" placeholder="Adresse email" required>
+  <input type="text" name="Adresse" placeholder="Adresse postale" required>
+  <input type="text" name="Ville" placeholder="Ville" required>
+  <input type="text" name="Code Postal" placeholder="Code postal" required pattern="[0-9]{5}" title="Entrez un code postal à 5 chiffres">
+  <button type="submit">Commencer la simulation</button>
+</form>
+
   </div>
 
   <script>
